@@ -19,3 +19,11 @@ Please find the description of the API endpoints in the attached document
 
 # Notes:
 * We have created a couple of temporary adminitstrators and added them to the system for development purpose. Any user with `role` as `4` in the `users` table is supposed to be an `Administrator`. 
+
+# Migrations:
+Run the following commands (one by one) in the terminal to apply the latest database migrations. Also, make sure to update the PostgreSQL database configurations, mentioned in Backend Setup document.
+```
+python -m flask db init
+flask db migrate -m "Updated database schema"
+flask db upgrade
+```
